@@ -11,7 +11,7 @@ const StudentForm = (props) => {
 const validationSchema = Yup.object().shape({
 	name: Yup.string().required("Required"),
 	email: Yup.string()
-	.email("You have enter an invalid email address")
+	.email("invalid email address")
 	.required("Required"),
 	rollno: Yup.number()
 	.positive("Invalid roll number")
@@ -28,8 +28,6 @@ return (
 				className="form-control" />
 			<ErrorMessage
 			name="name"
-			className="d-block invalid-feedback"
-			component="span"
 			/>
 		</FormControl>
 		<FormControl>
@@ -37,8 +35,6 @@ return (
 				className="form-control" />
 			<ErrorMessage
 			name="email"
-			className="d-block invalid-feedback"
-			component="span"
 			/>
 		</FormControl>
 		<FormControl>
@@ -46,8 +42,6 @@ return (
 				className="form-control" />
 			<ErrorMessage
 			name="rollno"
-			className="d-block invalid-feedback"
-			component="span"
 			/>
 		</FormControl>
 		<Button variant="danger" size="lg"

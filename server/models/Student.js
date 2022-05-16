@@ -8,7 +8,7 @@ let studentSchema = new Schema({
   email: {
     type: String
   },
-  id: {
+  rollno: {
     type: Number
   }
 }, {
